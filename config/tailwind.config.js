@@ -1,22 +1,21 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
+//import { fontFamily as _fontFamily } from 'tailwindcss/defaultTheme'
+const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
-    './public/*.html',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim}'
+    './app/views/**/*',
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
+      colors: {
+        primary: colors.blue
+      }
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
-  ]
+  ],
 }

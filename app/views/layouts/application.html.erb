@@ -12,8 +12,23 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <header class="bg-slate-600">
+      <%= image_tag 'logo.png', alt: 'The Pragmatic Bookshelf' %>
+      <h1><%= @page_title %></h1>
+    </header>
+
+    <section class="flex">
+      <nav class="bg-slate-900 p-6">
+        <ul class ="text-white leading-8">
+          <li><a href="/">Home</a></li>
+          <li><a href="/questions">Questions</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <main class="container mx-auto mt-4 px-5 flex">
       <%= yield %>
     </main>
+    </section>
   </body>
 </html>
