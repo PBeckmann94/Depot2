@@ -1,0 +1,11 @@
+@keyframes line-item-highlight {
+    0% {
+        background: rgb(167, 188, 167);
+    }
+    100% {
+      background: none;
+ }
+}
+.line-item-highlight {
+    animation: line-item-highlight 1s;
+}
